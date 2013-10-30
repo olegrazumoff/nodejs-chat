@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <script src="script/main.js"></script>
+    <script src="script/drag.js"></script>
+    <link rel="stylesheet" href="style/style.css" type="text/css"/>
+</head>
+<body onload="addhandlers(document.everything);">
+<div class="window" style="left: 10px; top: 10px; z-index: 1; width: 700px; height: 420px;">
+    <div class="titlebar" style="width: 690px;" onmousedown="drag(this.parentNode, event);">Тестовое окно</div>
+    <div class="content" style="width: 690px; height: 385px;">
+        <form name="everything">
+            <! HTML форма "все в одном"... >
+            <table border="border" cellpadding="5"> <! в виде большой HTML таблицы >
+                <tr>
+                    <td>Username:<br>[1]<input type="text" name="username" size="15"></td>
+                    <td>Password:<br>[2]<input type="password" name="password" size="15"></td>
+                    <td rowspan="4">Input Events[3]<br>
+                        <textarea name="textarea" rows="20" cols="28"></textarea></td>
+                    <td rowspan="4" align="center" valign="center">
+                        [9]<input type="button" value="Clear" name="clearbutton"><br>
+                        [10]<input type="submit" name="submitbutton" value="Submit"><br>
+                        [11]<input type="reset" name="resetbutton" value="Reset"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Filename: [4]<input type="file" name="file" size="15"></td>
+                </tr>
+                <tr>
+                    <td>My Computer Peripherals:<br>
+                        [5]<input type="checkbox" name="extras" value="burner">DVD Writer<br>
+                        [5]<input type="checkbox" name="extras" value="printer">Printer<br>
+                        [5]<input type="checkbox" name="extras" value="card">Card Reader
+                    </td>
+                    <td>My Web Browser:<br>
+                        [6]<input type="radio" name="browser" value="ff">Firefox<br>
+                        [6]<input type="radio" name="browser" value="ie">Internet Explorer<br>
+                        [6]<input type="radio" name="browser" value="other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>My Hobbies:[7]<br>
+                        <select multiple="multiple" name="hobbies" size="4">
+                            <option value="programming">Hacking JavaScript
+                            <option value="surfing">Surfing the Web
+                            <option value="caffeine">Drinking Coffee
+                            <option value="annoying">Annoying my Friends
+                        </select></td>
+                    <td align="center" valign="center">My Favorite Color:<br>[8]
+                        <select name="color">
+                            <option value="red">Red
+                            <option value="green">Green
+                            <option value="blue">Blue
+                            <option value="white">White
+                            <option value="violet">Violet
+                            <option value="peach">Peach
+                        </select></td>
+                </tr>
+            </table>
+        </form>
+        <script>(new Image()).src = "http://openclipart.org/people/ricardomaia/glossy_yellow_button.svg";</script>
+        <img src="http://openclipart.org/people/ricardomaia/glossy_red_button.svg"
+             onmouseover="this.src='http://openclipart.org/people/ricardomaia/glossy_yellow_button.svg'"
+             onmouseout="this.src='http://openclipart.org/people/ricardomaia/glossy_red_button.svg'">
+
+    </div>
+</div>
+<div id="swim" class="window" style="left: 75px; top: 110px; z-index: 2;">
+    <div class="titlebar" onmousedown="drag(this.parentNode, event);">Еще одно окно</div>
+    <div class="content"
+         style="background-color:#d0d0d0; font-weight:bold;">
+        Это еще одно окно. Значение атрибута <tt>z index</tt> этого окна заставляет его
+        расположиться поверх другого. За счет CSS стилей содержимое этого окна
+        будет выглядеть полупрозрачным в броузерах, поддерживающих такую возможность.
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg>
+
+</body>
+
+</html>
