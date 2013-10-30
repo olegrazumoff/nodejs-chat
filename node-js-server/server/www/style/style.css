@@ -1,0 +1,32 @@
+div.window {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border: 3px outset gray;
+}
+
+div.titlebar {
+    position: absolute;
+    top: 0px;
+    height: 18px;
+    width: 290px;
+    background-color: #aaa;
+    border-bottom: groove gray 2px;
+    padding: 3px 5px 2px 5px;
+    font: bold 11pt sans serif;
+}
+
+div.content {
+    position: absolute;
+    top: 25px;
+    height: 165px;
+    width: 290px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+div.translucent {
+    opacity: .75;
+    moz-opacity: .75;
+    filter: alpha(opacity = 75);
+}
